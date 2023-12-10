@@ -65,3 +65,4 @@ console.log(g);  // op = 898 since we already gave global value og g = 898 so th
 //    const element = array[i];                  // for loop
 
 //}
+
