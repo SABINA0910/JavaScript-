@@ -129,3 +129,8 @@ if (loggedInFromGoogle || loggedInFromEmail){  // so any of the condition is tru
     console.log("user logged in");
 }
 // op = user logged in
+
+
+// && operator = here both the condition must be true
+
+// || OR operator = here any one condition is true then the code will be be executed
