@@ -75,3 +75,29 @@ form.addEventListener('submit', function(e){
 });
 
 ```
+# PROJECT 3 = DIGITAL - CLOCK
+
+```javascript 
+  
+   // TIME DISPLAY
+//document.querySelector('#clock')
+
+
+const clock = document.getElementById('clock')
+
+let date = new Date();
+console.log(date.toLocaleTimeString());
+
+// setInterval = this method controls the even in javascript 
+// just give the method and tell after  how many intervals  you want to  continuously run and it does so  until the program is running 
+// 
+
+// always write the syntax the same way otherwise it wont work 1000= 1sec or 2000 = 2sec
+setInterval(function(){
+  let date = new Date();
+  //console.log(date.toLocaleTimeString()); // so now the values comes after each 1 second 
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000); 
+
+
+```
