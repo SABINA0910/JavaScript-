@@ -43,3 +43,35 @@ buttons.forEach(function (button){
 
 ```
 
+## project 2
+
+```javascript
+
+
+const form = document.querySelector('form');
+// you cannot use const height or weight outside the form
+// this use case will give you empty value
+// const height = parseInt(document.querySelector('#height').value)
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  
+  const results = document.querySelector('#results');
+
+
+  if(height === '' || height < 0 || isNaN(height)){
+    results.innerHTML = `Please give a valid height ${height}`;
+  } else if(weight === '' || weight < 0 || isNaN(weight)){
+    results.innerHTML = `Please give a valid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((height*height)/1000)).toFixed(2) // toFixed9(2) is written here so that we get the number in 2 decimal not more large numbers
+    // show the result
+    results.innerHTML = `<span>${bmi}</span>` ;
+
+  }
+});
+
+```
