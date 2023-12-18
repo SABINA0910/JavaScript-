@@ -1,0 +1,35 @@
+
+ 
+<! DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset = "UTF-8"
+    <meta name = "viewport"
+    content="width = device-width, initial-scale=1.0">
+
+    <title>DOM, learning</title>
+
+</head> 
+<body>
+     <h1> Chai aur Code </h1>
+     <button id= "stop">Stop</button>
+</body> 
+<script>
+    const saySabina = function(){
+        console.log("S A B I N A");
+    }
+    //document.querySelector('h1').innerHTML = "SABINA CODE SERIES"= this will show the instant change but we want the output after 2 second for that;
+    const changeText = function(){
+        document.querySelector('h1').
+        innerHTML = "SABINA CODE SERIES"
+    }
+    const changeMe = setTimeout (changeText, 2000)// so now the output will come in 2 second
+
+    document.querySelector('#stop').
+    addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+  
+</script>
+</html> 
